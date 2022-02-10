@@ -5,14 +5,6 @@
 
 EventList *CreateEventList(void)
 {
-    /*
-    Event *event = malloc(sizeof(Event));
-    name[15] = 0;
-    sscanf(name, "%s", event->eventName);
-    event->next = NULL;
-
-    return event;
-    */
     EventList *evenlist = malloc(sizeof(evenlist));
     return evenlist;
 }
@@ -109,7 +101,7 @@ void RemoveEvent(EventList *this, char *name)
 void ListEvents(EventList *this)
 {
     Event *a = this->head;
-    // imprime esto si la lista está vacía
+    
     if (this->isEmpty == 0)
         printf("empty\n");
     else

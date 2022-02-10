@@ -1,1 +1,1 @@
-../tester/run-tests.sh: line 27:  4107 Segmentation fault      (core dumped) ./main < tests/13.in
+../tester/run-tests.sh: line 27: 60111 Segmentation fault      (core dumped) ./main < tests/13.in
