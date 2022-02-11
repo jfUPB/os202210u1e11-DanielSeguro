@@ -69,13 +69,9 @@ void RemoveEvent(EventList *this, char *name)
     if (x == NULL)
         return;
 
-        
     Event *a = this->head;
     if (this->isEmpty == 0)
-    {
         return;
-    }
-    // primero remover el último
     else
     {
 
@@ -83,12 +79,14 @@ void RemoveEvent(EventList *this, char *name)
         {
             if (*(this->head->eventName + 2) == *(name + 2))
             {
+
                 this->head = this->head->next;
                 break;
             }
 
             else if (*(a->next->eventName + 2) == *(name + 2))
             {
+
                 a->next = a->next->next;
 
                 break;
