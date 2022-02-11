@@ -22,7 +22,6 @@ Event *SearchEvent(EventList *this, char *name)
     {
         return NULL;
     }
-    // primero remover el último
     else
     {
 
@@ -111,7 +110,7 @@ void ListEvents(EventList *this)
     {
         while (a != NULL)
         {
-            printf("%s\n", a->eventName); // BORRAR OJO
+            printf("%s\n", a->eventName); 
             a = a->next;
         }
     }
