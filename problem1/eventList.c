@@ -65,7 +65,12 @@ void AddEvent(EventList *this, Event *event)
 
 void RemoveEvent(EventList *this, char *name)
 {
-     Event *a = this->head;
+    Event *x = SearchEvent(this, name);
+    if (x == NULL)
+        return;
+
+        
+    Event *a = this->head;
     if (this->isEmpty == 0)
     {
         return;
@@ -73,7 +78,7 @@ void RemoveEvent(EventList *this, char *name)
     // primero remover el último
     else
     {
-       
+
         while (a != NULL)
         {
             if (*(this->head->eventName + 2) == *(name + 2))
@@ -91,7 +96,7 @@ void RemoveEvent(EventList *this, char *name)
 
             a = a->next;
         }
-        if (this->head==NULL)
+        if (this->head == NULL)
         {
             this->isEmpty = 0;
         }
@@ -101,7 +106,7 @@ void RemoveEvent(EventList *this, char *name)
 void ListEvents(EventList *this)
 {
     Event *a = this->head;
-    
+
     if (this->isEmpty == 0)
         printf("empty\n");
     else
