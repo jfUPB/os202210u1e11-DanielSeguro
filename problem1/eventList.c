@@ -5,7 +5,10 @@
 
 EventList *CreateEventList(void)
 {
-    EventList *evenlist = malloc(sizeof(evenlist));
+    EventList *evenlist = malloc(sizeof(EventList));
+    evenlist->head = NULL;
+    evenlist->isEmpty = 0;
+    evenlist->last = NULL;
     return evenlist;
 }
 
@@ -110,7 +113,7 @@ void ListEvents(EventList *this)
     {
         while (a != NULL)
         {
-            printf("%s\n", a->eventName); 
+            printf("%s\n", a->eventName);
             a = a->next;
         }
     }
